@@ -1,4 +1,4 @@
-# tiling
+# Triomino Tiling
 Triomino Tiling Algorithm Visualization
 
 Main Files:
