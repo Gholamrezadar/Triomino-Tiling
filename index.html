@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <style> body {padding: 0; margin: 0;} </style>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/p5.min.js"></script>
+    <script src="js/p5.dom.min.js"></script>
+    <script src="js/sketch.js"></script>
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+  Press
+  <button id="plus">+</button>
+  <button id="minus">-</button>
+  and then select the missing Tile
+  <br>
+  
+  <script>
+    
+$("#plus").click(function(){
+    if(M<6){
+        M++;
+        N = Math.pow(2, M);
+        w = Canvas_Size / N;
+        grid = Array(N).fill().map(() => Array(N).fill(0));
+        symbols = [];
+        for (let i = 1; i <= N * N; i++) {
+          symbols.push(i);
+        }
+        // Call Drawing Function
+        DrawTiling();
+    }
+    else
+    {
+    alert("Sooo Much Salt!")
+    }
+});
+
+$("#minus").click(function(){
+    if(M>2){
+        M--;
+        N = Math.pow(2, M);
+        w = Canvas_Size / N;
+        grid = Array(N).fill().map(() => Array(N).fill(0));
+        symbols = [];
+        for (let i = 1; i <= N * N; i++) {
+          symbols.push(i);
+        }
+        // Call Drawing Function
+        DrawTiling();
+    }
+    else
+    {
+    alert("Sooo Much Salt!")
+    }
+});
+  </script>
+  </body>
+</html>
