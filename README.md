@@ -9,3 +9,7 @@ Main Files:
 
 ref:
 https://www.geeksforgeeks.org/tiling-problem-using-divide-and-conquer-algorithm/
+
+libraries : 
+* JQuery
+* p5*js
